@@ -29,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Run tests and generate coverage
-        run: npm run test -- --coverage
+        run: ng test --browsers=ChromeHeadless --code-coverage --watch=false
 
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v3
